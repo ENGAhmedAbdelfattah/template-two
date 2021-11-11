@@ -1,6 +1,12 @@
 //------------------------------------------------ 
 //- START COMPONENT
-
+mixin several-header(h2, p1, p2)
+  header.several-header
+    h2.several-h2= h2
+    hr.several-hr
+    p= p1
+    p= p2
+  article 
 //- END COMPONENT
 //- -----------------------------------------------
 doctype html
@@ -36,7 +42,31 @@ html(lang="en")
     //- END MAIN
     //- -----------------------------------------------
     //- START SERVICE SECTION
-
+    section.service 
+      .container
+        +several-header('SERVICES','Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris', 'blandit aliquet elit, eget tincidunt.')
+        article
+          .one(class= "serv")
+            i(class= "fas fa-desktop")
+            div 
+              h3 
+              p 
+          .two(class= "serv")
+            i(class= "fas fa-cog")
+            div 
+              h3 
+              p
+          .three(class= "serv")
+            i(class= "fas fa-pencil-ruler")
+            div 
+              h3 
+              p
+          .four(class= "serv")
+            i(class= "fas fa-camera")
+            div 
+              h3 
+              p
+    
     //- END SERVICE SECTION
     //- -----------------------------------------------
     //- Start feature section 

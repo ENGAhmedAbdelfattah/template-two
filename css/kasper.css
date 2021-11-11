@@ -28,7 +28,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 12pt;
   background-color: #1f2021;
-  font-weight: normal;
+  font-weight: 300;
 }
 ul {
   list-style: none;
@@ -60,7 +60,38 @@ ul {
 /* END GROBAL RULES */
 /* ----------------------------------------------- */
 /* START COMPONENT */
-
+.several-header {
+  text-align: center;
+  color: #1f2021;
+}
+.several-h2 {
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 30pt;
+  font-weight: 400;
+}
+.several-hr {
+  width: 120px;
+  height: 2px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #1f2021;
+  border-width: 0px;
+  margin-bottom: 40px;
+}
+.several-hr::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--secound-color);
+  border-radius: 50%;
+  border: 2px solid #1f2021;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /* END COMPONENT */
 /* ----------------------------------------------- */
 /* START MAIN */
@@ -168,7 +199,7 @@ main section.landing .icon .fa-angle-right {
   height: 20px;
   border-radius: 50%;
   border: 1px solid var(--secound-color);
-  margin: 50px 5px 0;
+  margin: 50px 5px 25px;
 }
 
 .circle-two {
@@ -178,7 +209,13 @@ main section.landing .icon .fa-angle-right {
 /* END MAIN */
 /* ----------------------------------------------- */
 /* START SERVICE SECTION */
+section.service {
+  background-color: var(--secound-color);
+  padding: 50px 0;
+}
 
+section.service .container {
+}
 /* END SERVICE SECTION */
 /* ----------------------------------------------- */
 /* Start feature section */
