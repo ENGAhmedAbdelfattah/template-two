@@ -7,10 +7,21 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Kasper | One Page PSD Template
     include includes/links
-  body 
-
-    //- Start header
-
+  body
+    //- START HEADER
+    .header
+      .container
+        .navbar
+          .logo: img(src="image/logo.png", alt="logo")
+          ul.list
+            -var list=["HOME", "SERVICES", "PORTFOLIO", "ABOUT", "PRICING", "CONTACT"]
+            for item in list 
+              li: a(href="#")=item
+          .search | #[i(class="fas fa-search")]
+        
+    //- END HEADER
+    //- -----------------------------------------------
+    //- start landing section
     //- End landing section
     //- -----------------------------------------------
     //- Start feature section 
