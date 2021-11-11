@@ -1,3 +1,8 @@
+//------------------------------------------------ 
+//- START COMPONENT
+
+//- END COMPONENT
+//- -----------------------------------------------
 doctype html
 html(lang="en")
   head
@@ -8,21 +13,31 @@ html(lang="en")
     title Kasper | One Page PSD Template
     include includes/links
   body
-    //- START HEADER
-    .header
+    //- START MAIN
+    main
       .container
-        .navbar
+        nav
           .logo: img(src="image/logo.png", alt="logo")
-          ul.list
+          ul
             -var list=["HOME", "SERVICES", "PORTFOLIO", "ABOUT", "PRICING", "CONTACT"]
             for item in list 
               li: a(href="#")=item
           .search | #[i(class="fas fa-search")]
-        
-    //- END HEADER
+      section.landing 
+        h2 Hello World! #[br] We Are Kasper We Make Art.
+        p Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+        .icon
+          i(class="fas fa-angle-left fa-2x")
+          i(class="fas fa-angle-right fa-2x")
+      .circle  
+        .circle-one
+        .circle-two
+        .circle-three
+    //- END MAIN
     //- -----------------------------------------------
-    //- start landing section
-    //- End landing section
+    //- START SERVICE SECTION
+
+    //- END SERVICE SECTION
     //- -----------------------------------------------
     //- Start feature section 
 
