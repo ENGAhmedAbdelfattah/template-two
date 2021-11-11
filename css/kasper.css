@@ -1,0 +1,88 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+/* Start variable */
+/* :root {
+
+} */
+/* End variable */
+/* ----------------------------------------------- */
+/* Start grobal rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto 0 auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End grobal rules */
+/* ----------------------------------------------- */
+/* Start component */
+
+/* End component */
+/* ----------------------------------------------- */
+/* start header */
+
+/* End header */
+/* ----------------------------------------------- */
+/* Start landing section */
+
+/* End landing section */
+/* ----------------------------------------------- */
+/* Start feature section */
+
+/* End feature section */
+/* ----------------------------------------------- */
+/* Start services */
+
+/* End services */
+/* ----------------------------------------------- */
+/* Start portfolio */
+
+/* End portfolio */
+/* ----------------------------------------------- */
+/* Start about */
+
+/* End about */
+/* ----------------------------------------------- */
+/* Start contact */
+
+/* End contact */
+/* ----------------------------------------------- */
+/* Start footer  */
+
+/* End footer */
