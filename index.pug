@@ -6,7 +6,13 @@ mixin several-header(h2, p1, p2)
     hr.several-hr
     p= p1
     p= p2
-  article 
+|
+mixin serv(num, icon, h3, pragraph)
+  div(class= num)
+    i(class= icon)
+    div
+      h3= h3
+      p= pragraph
 //- END COMPONENT
 //- -----------------------------------------------
 doctype html
@@ -46,32 +52,24 @@ html(lang="en")
       .container
         +several-header('SERVICES','Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris', 'blandit aliquet elit, eget tincidunt.')
         article
-          .one(class= "serv")
-            i(class= "fas fa-desktop")
-            div 
-              h3 
-              p 
-          .two(class= "serv")
-            i(class= "fas fa-cog")
-            div 
-              h3 
-              p
-          .three(class= "serv")
-            i(class= "fas fa-pencil-ruler")
-            div 
-              h3 
-              p
-          .four(class= "serv")
-            i(class= "fas fa-camera")
-            div 
-              h3 
-              p
-    
+          +serv("one serv","fas fa-desktop fa-3x","Vorem amet intuitive","Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.")
+          +serv("two serv","fas fa-cog fa-3x","Vorem amet intuitive","Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.")
+          +serv("three serv","fas fa-pencil-ruler fa-3x","Vorem amet intuitive","Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.")
+          +serv("four serv","fas fa-camera fa-3x","Vorem amet intuitive","Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.")
     //- END SERVICE SECTION
     //- -----------------------------------------------
-    //- Start feature section 
-
-    //- End feature section
+    //- START OUR DESIGN SECTION 
+    section.design
+      .image: img(src="image/mobile.png", alt="mobile")
+      article
+        h2 Hello World!We Are Kasper We Make Art.
+        - var prags= ["Responsive Design", "Modern And Clean Design", "Clean Code", "Browser Friendly"]
+        each pra in prags
+          p: i(class="fas fa-desktop") #{pra}
+          
+          
+        
+    //- END OUR DESIGN SECTION
     //- ---------------------------------------------
     //- Start services
 
