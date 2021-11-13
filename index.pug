@@ -28,13 +28,18 @@ html(lang="en")
     //- START MAIN
     main
       .container
+        -var list=["HOME", "SERVICES", "PORTFOLIO", "ABOUT", "PRICING", "CONTACT"]
         nav
           .logo: img(src="image/logo.png", alt="logo")
-          ul
-            -var list=["HOME", "SERVICES", "PORTFOLIO", "ABOUT", "PRICING", "CONTACT"]
+          ul.list-bar
+            for item in list 
+              li: a(href="#")=item
+          .menu #[i(class="fas fa-bars fa-2x")]
+          ul.list-menu
             for item in list 
               li: a(href="#")=item
           .search | #[i(class="fas fa-search")]
+
       section.landing 
         h2 Hello World! #[br] We Are Kasper We Make Art.
         p Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
