@@ -67,22 +67,26 @@ html(lang="en")
     section.design
       .image: img(src="image/mobile.png", alt="mobile")
       article
-        h2 Hello World!We Are Kasper We Make Art.
+        h2 OUR DESIGN COMES WITH...
         - var prags= ["Responsive Design", "Modern And Clean Design", "Clean Code", "Browser Friendly"]
         each pra in prags
-          p: i(class="fas fa-desktop") #{pra}
-          
-          
-        
+          p 
+            i(class="fas fa-desktop")
+            |#{pra}
     //- END OUR DESIGN SECTION
     //- ---------------------------------------------
-    //- Start services
-
-    //- End services
+    //- START PORTFOLIO SECTION
+    section.portfolio
+      +several-header('portfolio', 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris', 'blandit aliquet elit, eget tincidunt.')
+      - var imgFilters= ["All", "App", "Photo", "Web", "Print"]
+      ul 
+        each filter in imgFilters
+          li=filter
+    //- END PORTFOLIO SECTION
     //- ----------------------------------------------
-    //- Start portfolio  -->
+    //- Start f  -->
 
-    //- End portfolio -->
+    //- End f -->
     //- ----------------------------------------------
     //- Start about  -->
 

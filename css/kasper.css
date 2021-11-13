@@ -308,19 +308,22 @@ section.service .container article .serv h3 {
 
 @media (max-width: 767.98px) {
   section.service .container article .serv {
-    width: auto;
+    width: 100%;
   }
 }
 /* END SERVICE SECTION */
 /* ----------------------------------------------- */
 /* START OUR DESIGN SECTION */
 section.design {
+  display: flex;
   position: relative;
+  justify-content: space-between;
+  column-gap: 20px;
 }
 section.design::before {
   content: "";
   width: 100%;
-  height: calc(100% + 30px);
+  height: calc(100%);
   background-image: url(../image/design-features.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -328,14 +331,64 @@ section.design::before {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -2;
+}
+
+section.design .image {
+  width: 50%;
+  position: relative;
+}
+
+section.design .image img {
+  position: absolute;
+  bottom: -15%;
+  left: 22%;
   z-index: -1;
 }
 
+section.design article {
+  color: var(--secound-color);
+  background-color: var(--main-color-transparent, #19c9fa8a);
+  width: 60%;
+  padding: 40px 50px 40px;
+  margin: 120px 0;
+}
+
+section.design article h2 {
+  margin: 8px 0 15px;
+  font-size: 14pt;
+  font-weight: 400;
+}
+
+section.design article p {
+  width: fit-content;
+  font-size: 12pt;
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+section.design article p i {
+  padding-right: 20px;
+}
+
+@media (max-width: 767.98px) {
+  /* section.design {
+    display: block;
+  } */
+  section.design .image {
+    display: none;
+  }
+  section.design article {
+    width: 100%;
+  }
+}
 /* END OUR DESIGN SECTION */
 /* ----------------------------------------------- */
-/* Start services */
-
-/* End services */
+/* START PORTFOLIO SECTION */
+section.portfolio {
+  background-color: var(--secound-color);
+}
+/* END PORTFOLIO SECTION */
 /* ----------------------------------------------- */
 /* Start portfolio */
 
