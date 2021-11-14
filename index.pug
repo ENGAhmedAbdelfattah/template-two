@@ -20,6 +20,11 @@ mixin image-box(imgsrc,imgalt,p1,p2)
     .text
       p #{p1}
       p #{p2}
+mixin item-count(icon, number, pragraph)
+  .item-count
+    i(class= icon)
+    h3= number 
+    p= pragraph
 //- END COMPONENT
 //- -----------------------------------------------
 doctype html
@@ -123,9 +128,35 @@ html(lang="en")
         img(src="image/about.png", alt="about")
     //- END ABOUT -->
     //- ----------------------------------------------
-    //- Start contact -->
+    //- START STATS -->
+    section.stats
+      .container
+        article 
+          +item-count("fas fa-mug-hot", "1.236", "coffee drinks")
+          +item-count("far fa-folder", "256", "completed projects")
+          +item-count("far fa-envelope", "1,743", "mail sent")
+          +item-count("fas fa-trophy", "17", "awards received")
+    //- END COUNT -->
+    //- ----------------------------------------------
+    //- Start footer -->
 
-    //- End contact -->
+    //- End footer -->
+    //- ----------------------------------------------
+    //- Start footer -->
+
+    //- End footer -->
+    //- ----------------------------------------------
+    //- Start footer -->
+
+    //- End footer -->
+    //- ----------------------------------------------
+    //- Start footer -->
+
+    //- End footer -->
+    //- ----------------------------------------------
+    //- Start footer -->
+
+    //- End footer -->
     //- ----------------------------------------------
     //- Start footer -->
 
