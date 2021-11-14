@@ -13,6 +13,13 @@ mixin serv(num, icon, h3, pragraph)
     div
       h3= h3
       p= pragraph
+mixin image-box(imgsrc,imgalt,p1,p2)
+  .image-box
+    .image
+      img(src= imgsrc, alt= imgalt)
+    .text
+      p #{p1}
+      p #{p2}
 //- END COMPONENT
 //- -----------------------------------------------
 doctype html
@@ -79,18 +86,42 @@ html(lang="en")
     section.portfolio
       +several-header('portfolio', 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris', 'blandit aliquet elit, eget tincidunt.')
       - var imgFilters= ["All", "App", "Photo", "Web", "Print"]
-      ul 
-        each filter in imgFilters
-          li=filter
+      article
+        ul 
+          each filter in imgFilters
+            li=filter
+        .container-image-box
+          +image-box("image/shuffle-01.jpg","shuffle-01","Awesome Image","Photography")
+          +image-box("image/shuffle-02.jpg","shuffle-02","Awesome Image","Photography")
+          +image-box("image/shuffle-03.jpg","shuffle-03","Awesome Image","Photography")
+          +image-box("image/shuffle-04.jpg","shuffle-04","Awesome Image","Photography")
+          +image-box("image/shuffle-05.jpg","shuffle-05","Awesome Image","Photography")
+          +image-box("image/shuffle-06.jpg","shuffle-06","Awesome Image","Photography")
+          +image-box("image/shuffle-07.jpg","shuffle-07","Awesome Image","Photography")
+          +image-box("image/shuffle-08.jpg","shuffle-08","Awesome Image","Photography")
+        button.repeat-button more
+
     //- END PORTFOLIO SECTION
     //- ----------------------------------------------
-    //- Start f  -->
-
-    //- End f -->
+    //- START VEDIO SECTION  -->
+    section.video
+      .video 
+        video(autoplay loop muted)
+          source(src="image/awesome-video.mp4" type="video/mp4")
+          .
+            your browser not supporting tag
+        article 
+          h2 super awesome video here
+          p its all you need
+          button see more
+    //- END VEDIO SECTION -->
     //- ----------------------------------------------
-    //- Start about  -->
-
-    //- End about -->
+    //- START ABOUT  -->
+    section.about
+      +several-header("about us", "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris", "blandit aliquet elit, eget tincidunt.")
+      .image
+        img(src="image/about.png", alt="about")
+    //- END ABOUT -->
     //- ----------------------------------------------
     //- Start contact -->
 
