@@ -534,7 +534,7 @@ section.video .video article button {
 
 /* END VEDIO SECTION */
 /* ----------------------------------------------- */
-/* START ABOUT */
+/* START ABOUT SECTION*/
 section.about {
   background-color: var(--secound-color);
   padding: var(--main-vpadding-section, 100px) 0;
@@ -561,9 +561,9 @@ section.about .image img {
     width: 90%;
   }
 }
-/* END ABOUT */
+/* END ABOUT SECTION*/
 /* ----------------------------------------------- */
-/* START STATS */
+/* START STATS SECTION*/
 section.stats {
   width: 100%;
   background-color: var(--main-background-color);
@@ -615,7 +615,18 @@ section.stats .container article {
 .item-count p {
   text-transform: capitalize;
 }
-/* END STATS */
+/* END STATS SECTION*/
+/* ----------------------------------------------- */
+/* START SKILLS SECTION  */
+section.skills {
+  background-color: var(--secound-color, #ffffff);
+  padding: var(--main-vpadding-section, 100px);
+}
+
+section.skills .container {
+  
+}
+/* START SKILLS SECTION */
 /* ----------------------------------------------- */
 /* Start footer  */
 
@@ -636,8 +647,3 @@ section.stats .container article {
 /* Start footer  */
 
 /* End footer */
-/* ----------------------------------------------- */
-/* Start footer  */
-
-/* End footer */
-
