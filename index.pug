@@ -115,31 +115,31 @@ html(lang="en")
     section.skills
       .container
         .testimonials
-          +skill-header("h2", "p1", "p2")
+          +skill-header("testimonials", "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.", "Mauris blandit aliquet elit, eget tincidunt.")
           article
             .item
               .item-testimonials
                 .image: img(src="image/skills-01.jpg", alt="skills-01")
-                details
-                  p curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. mauris blandit aliquet elit, eget tincidunt.
-                  span john doe, ceo
+                .text
+                  p Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. mauris blandit aliquet elit, eget tincidunt.
+                  span John Doe, CEO
                   hr
               .item-testimonials
                 .image: img(src="image/skills-02.jpg", alt="skills-02")
-                details
-                  p curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. mauris blandit aliquet elit, eget tincidunt.
-                  span john doe, ceo
+                .text
+                  p Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. mauris blandit aliquet elit, eget tincidunt.
+                  span John Doe, CEO
                   hr
-            .circle
-              .circle-one
-              .circle-two
-              .circle-three
+            .circle-skills
+              .circle-one-skills
+              .circle-two-skills(class="circle-two")
+              .circle-three-skills
         .degree-skills
-          +skill-header("h2", "p1", "p2")
+          +skill-header("skills", "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.", "Mauris blandit aliquet elit, eget tincidunt.")
           article
-            h3 adobe
-              .range
-                .fill-range
+            -var hskills = ["ADOBE","HTML & CSS","JAVASCRIPT","PHP"]
+              each val, index in hskills
+                +deg-skills(val,"num" + index)
     //- END SKILLS SECTION
     //- ----------------------------------------------
     //- Start footer -->

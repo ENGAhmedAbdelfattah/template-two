@@ -38,6 +38,17 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
 textarea {
   resize: vertical;
 }
@@ -80,6 +91,16 @@ ul {
   padding: 20px 0;
   font-size: 30pt;
   font-weight: 400;
+}
+.skill-h2 {
+  text-transform: uppercase;
+  font-size: 14pt;
+  font-weight: 500;
+  padding: 0 0 25px;
+}
+.pra {
+  font-weight: 400;
+  color: #777;
 }
 .several-hr {
   width: 120px;
@@ -620,13 +641,159 @@ section.stats .container article {
 /* START SKILLS SECTION  */
 section.skills {
   background-color: var(--secound-color, #ffffff);
-  padding: var(--main-vpadding-section, 100px);
+  padding: var(--main-vpadding-section, 100px) 0;
 }
 
 section.skills .container {
-  
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 100px;
 }
-/* START SKILLS SECTION */
+
+section.skills .container article {
+  padding: 60px 0 40px;
+}
+
+section.skills .container .item .item-testimonials {
+  display: flex;
+  column-gap: 50px;
+  row-gap: 30px;
+  padding: 0 0 30px;
+}
+section.skills .container .item .item-testimonials .image {
+  width: 120px;
+  height: 120px;
+}
+section.skills .container .item .item-testimonials .image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+section.skills .container .item .item-testimonials .text {
+  font-weight: 400;
+}
+
+section.skills .container .item .item-testimonials .text span {
+  display: block;
+  text-align: end;
+  font-size: 10.5pt;
+  padding: 15px 0;
+  color: #777;
+}
+
+.circle-skills {
+  display: flex;
+  justify-content: center;
+}
+
+.circle-skills > div {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.circle-one-skills,
+.circle-two-skills,
+.circle-three-skills {
+  border: 1px solid #9e9d9d;
+}
+
+.circle-two-skills {
+  border-color: var(--main-color, #19c8fa);
+}
+
+section.skills .container .degree-skills article {
+  text-transform: uppercase;
+  font-size: 10pt;
+  padding: 60px 0 40px;
+  row-gap: 30px;
+}
+section.skills .degree-skills article .item-deg-skills {
+  padding-bottom: 40px;
+}
+section.skills .container .degree-skills article h3 {
+  padding-bottom: 10px;
+}
+
+.range {
+  height: 30px;
+  background-color: #dedadc;
+}
+
+.fill-range {
+  height: 100%;
+  background-color: var(--main-color, #19c8fa);
+}
+
+.num0 {
+  width: 90%;
+  position: relative;
+}
+
+.num0::before {
+  content: "90%";
+}
+
+.num1 {
+  width: 85%;
+  position: relative;
+}
+
+.num1::before {
+  content: "85%";
+}
+
+.num2 {
+  width: 80%;
+  position: relative;
+}
+
+.num2::before {
+  content: "80%";
+}
+
+.num3 {
+  width: 90%;
+  position: relative;
+}
+
+.num3::before {
+  content: "90%";
+}
+
+.fill-range::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 30px;
+  padding: 0px 1px;
+  font-size: 12pt;
+  font-weight: 400;
+  line-height: 0.8;
+  border-radius: 4px;
+  background-color: #000000;
+  color: var(--secound-color, #ffffff);
+  position: absolute;
+  top: -12px;
+  right: 0;
+  transform: translate(50%, -100%);
+}
+
+.fill-range::after {
+  content: "";
+  border-width: 7px 7px 0;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  transform: translate(50%, -100%);
+}
+/* END SKILLS SECTION */
 /* ----------------------------------------------- */
 /* Start footer  */
 
