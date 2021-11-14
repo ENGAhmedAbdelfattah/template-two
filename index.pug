@@ -1,30 +1,6 @@
 //------------------------------------------------ 
 //- START COMPONENT
-mixin several-header(h2, p1, p2)
-  header.several-header
-    h2.several-h2= h2
-    hr.several-hr
-    p= p1
-    p= p2
-|
-mixin serv(num, icon, h3, pragraph)
-  div(class= num)
-    i(class= icon)
-    div
-      h3= h3
-      p= pragraph
-mixin image-box(imgsrc,imgalt,p1,p2)
-  .image-box
-    .image
-      img(src= imgsrc, alt= imgalt)
-    .text
-      p #{p1}
-      p #{p2}
-mixin item-count(icon, number, pragraph)
-  .item-count
-    i(class= icon)
-    h3= number 
-    p= pragraph
+include includes/mixin
 //- END COMPONENT
 //- -----------------------------------------------
 doctype html
