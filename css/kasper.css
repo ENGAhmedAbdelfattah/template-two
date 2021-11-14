@@ -36,6 +36,8 @@ body {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
+  color: var(--secound-color);
 }
 
 h1,
@@ -56,6 +58,15 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+th {
+  font-weight: normal;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 .container {
   padding: 0 15px;
@@ -129,8 +140,6 @@ ul {
   text-transform: uppercase;
   color: var(--secound-color, #ffffff);
   background-color: var(--main-color, #19c8fa);
-  border-width: 0;
-  border-radius: 0;
 }
 /* END COMPONENT */
 /* ----------------------------------------------- */
@@ -199,7 +208,8 @@ main a {
   transition: color 0.3s;
 }
 
-main li:hover a {
+main li:hover a,
+.active1 a {
   color: var(--main-color, #19c8fa);
 }
 
@@ -550,7 +560,6 @@ section.video .video article button {
   padding: 8px 20px;
   background-color: #000000;
   color: var(--secound-color, #ffffff);
-  border: none;
 }
 
 /* END VEDIO SECTION */
@@ -818,25 +827,118 @@ section.quote::before {
   z-index: -1;
 }
 
-section.quote article{
+section.quote article {
   text-align: center;
   color: var(--secound-color, #ffffff);
 }
 
-section.quote article p{
+section.quote article p {
   font-size: 22pt;
   font-weight: 500;
 }
 
-section.quote article span{
+section.quote article span {
   text-align: center;
-  /* font-size: 12pt; */
 }
 /* END QUOTE */
 /* ----------------------------------------------- */
-/* Start footer  */
+/* START PRICING  */
+section.pricing {
+  background-color: var(--secound-color, #ffffff);
+  padding: var(--main-vpadding-section, 100px) 0;
+}
 
-/* End footer */
+section.pricing .all-table {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 0 30px;
+}
+
+table {
+  display: block;
+  width: 250px;
+  background-attachment: red;
+}
+
+tr,
+th,
+td,
+thead,
+tfoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+thead {
+  display: block;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  text-transform: uppercase;
+  padding: 30px 40px;
+  margin: 0 auto;
+}
+
+thead .one {
+  display: block;
+  font-weight: normal;
+  font-size: 14pt;
+}
+
+thead .two {
+  display: block;
+  font-weight: bold;
+  font-size: 45pt;
+}
+thead .two sup {
+  font-weight: normal;
+  font-size: 25pt;
+  vertical-align: middle;
+}
+thead .two sub {
+  font-size: 12pt;
+}
+
+tbody {
+  display: block;
+  padding: 0 40px;
+  border-bottom: 1px solid var(--main-color);
+}
+tbody tr:not(tr:last-of-type) {
+  border-bottom: 1px solid var(--main-color);
+}
+
+tbody tr {
+  display: block;
+  padding: 15px 0;
+  font-size: 14;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+tfoot {
+  display: block;
+  padding: 30px 40px;
+}
+
+tfoot button {
+  width: fit-content;
+  padding: 15px 10px;
+  border: 1px solid var(--main-color);
+}
+tfoot button a {
+  color: #620d62;
+}
+
+tfoot button a:active {
+  color: red;
+}
+
+/* END PRICING */
 /* ----------------------------------------------- */
 /* Start footer  */
 

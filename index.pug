@@ -18,11 +18,19 @@ html(lang="en")
           .logo: img(src="image/logo.png", alt="logo")
           ul.list-bar
             for item in list 
-              li: a(href="#")=item
+              if item == list[0]
+                li.active1: a(href="#")=item
+              else
+                li: a(href="#")=item
+
+
           .menu #[i(class="fas fa-bars fa-2x")]
           ul.list-menu
-            for item in list 
-              li: a(href="#")=item
+            for item in list
+              if item == list[0]
+                li.active1: a(href="#")=item
+              else
+                li: a(href="#")=item
           .search | #[i(class="fas fa-search")]
 
       section.landing 
@@ -67,7 +75,10 @@ html(lang="en")
       article
         ul 
           each filter in imgFilters
-            li=filter
+              if filter == imgFilters[0]
+                li.active2= filter
+              else
+                li= filter
         .container-image-box
           +image-box("image/shuffle-01.jpg","shuffle-01","Awesome Image","Photography")
           +image-box("image/shuffle-02.jpg","shuffle-02","Awesome Image","Photography")
@@ -77,7 +88,7 @@ html(lang="en")
           +image-box("image/shuffle-06.jpg","shuffle-06","Awesome Image","Photography")
           +image-box("image/shuffle-07.jpg","shuffle-07","Awesome Image","Photography")
           +image-box("image/shuffle-08.jpg","shuffle-08","Awesome Image","Photography")
-        button.repeat-button more
+        button.repeat-button: a(href="#") more
 
     //- END PORTFOLIO SECTION
     //- ----------------------------------------------
@@ -91,7 +102,7 @@ html(lang="en")
         article 
           h2 super awesome video here
           p its all you need
-          button see more
+          button: a(href="#") see more
     //- END VEDIO SECTION
     //- ----------------------------------------------
     //- START ABOUT SECTION
@@ -150,9 +161,18 @@ html(lang="en")
           span John Doe
     //- END QUOTE
     //- ----------------------------------------------
-    //- Start footer -->
-
-    //- End footer -->
+    //- START PRICING
+    section.pricing
+      .container 
+        +several-header("pricing", "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris", "blandit aliquet elit, eget tincidunt.")
+        article
+          .all-table
+            +repeat-table("basic", "19", "Feature No 1", "Extra Feature", "Extra Feature No 2", "Feature")
+            +repeat-table("premium", "29", "Feature No 1", "Extra Feature", "Extra Feature No 2", "Feature")
+            +repeat-table("pro", "39", "Feature No 1", "Extra Feature", "Extra Feature No 2", "Feature")
+            +repeat-table("platinum", "49", "Feature No 1", "Extra Feature", "Extra Feature No 2", "Feature")
+            
+    //- END PRICING
     //- ----------------------------------------------
     //- Start footer -->
 
