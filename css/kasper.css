@@ -1000,21 +1000,27 @@ section.subscribe article form {
 }
 
 section.subscribe article form .input-place {
-  padding: 15px;
   display: flex;
+  align-items: stretch;
 }
 
 section.subscribe article form .input-place i {
   font-size: 16pt;
-  padding-right: 15px;
-  padding-left: 5px;
+  padding: 15px;
+  order: 1;
+}
+
+section.subscribe article form .input-place label {
+  order: 3;
 }
 
 section.subscribe article form .input-place input {
   background-color: transparent;
   border: none;
+  padding: 15px 0;
   color: var(--secound-color, #ffffff);
   caret-color: var(--main-color);
+  order: 2;
 }
 
 section.subscribe article form .input-place input:focus {
@@ -1048,10 +1054,10 @@ section.subscribe article p {
 }
 /* END SUBSCRIBE */
 /* ----------------------------------------------- */
-/* Start footer  */
+/* START CONTACT  */
 
-/* End footer */
+/* END CONTACT */
 /* ----------------------------------------------- */
-/* Start footer  */
+/* START FOOTER  */
 
-/* End footer */
+/* END FOOTER */
