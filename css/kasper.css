@@ -153,9 +153,9 @@ main::before {
   width: 100%;
   height: 100%;
   background-image: url(../image/landing.jpg);
+  filter: brightness(0.4);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
@@ -372,9 +372,9 @@ section.design::before {
   width: 100%;
   height: calc(100%);
   background-image: url(../image/design-features.jpg);
+  filter: brightness(0.4);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
@@ -607,9 +607,9 @@ section.stats::before {
   width: 100%;
   height: 100%;
   background-image: url(../image/stats.png);
+  filter: brightness(0.4);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
   position: absolute;
   top: 0;
   left: 0;
@@ -818,9 +818,9 @@ section.quote::before {
   width: 100%;
   height: 100%;
   background-image: url(../image/quote.jpg);
+  filter: brightness(0.3);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
   position: absolute;
   top: 0;
   left: 0;
