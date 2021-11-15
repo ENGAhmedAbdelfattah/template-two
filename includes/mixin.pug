@@ -1,0 +1,52 @@
+mixin several-header(h2, p1, p2)
+  header.several-header
+    h2.several-h2= h2
+    hr.several-hr
+    p.pra= p1
+    p.pra= p2
+|
+mixin serv(num, icon, h3, pragraph)
+  div(class= num)
+    i(class= icon)
+    div
+      h3= h3
+      p= pragraph
+|
+mixin image-box(imgsrc, imgalt, p1, p2)
+  .image-box
+    .image
+      img(src= imgsrc, alt= imgalt)
+    .text
+      p #{p1}
+      p #{p2}
+|
+mixin item-count(icon, number, pragraph)
+  .item-count
+    i(class= icon)
+    h3= number 
+    p= pragraph
+|
+mixin skill-header(h2, p1, p2)
+  header.several-header
+    h2.skill-h2= h2
+    p.pra= p1
+    p.pra= p2
+|
+mixin deg-skills(h3, num)
+  .item-deg-skills
+    h3= h3
+    .range
+      .fill-range(class= num)
+|
+mixin repeat-table(th_one, price, bodyr1, bodyr2, bodyr3, bodyr4)
+  table
+    thead
+      tr: th.one #{th_one}
+      tr: th.two #[sup $] #[span #{price}] #[sub /mo]
+    tbody
+      tr: td #{bodyr1}
+      tr: td #{bodyr2}
+      tr: td #{bodyr3}
+      tr: td #{bodyr4}
+    tfoot
+      tr: td:  button: a(href="#") buy now
