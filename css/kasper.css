@@ -67,6 +67,7 @@ th {
 button {
   border: none;
   cursor: pointer;
+  display: block;
 }
 .container {
   padding: 0 15px;
@@ -136,7 +137,7 @@ button {
   transform: translate(-50%, -50%);
 }
 .repeat-button {
-  padding: 15px 20px;
+  padding: 10px 20px;
   text-transform: uppercase;
   color: var(--secound-color, #ffffff);
   background-color: var(--main-color, #19c8fa);
@@ -809,7 +810,7 @@ section.quote {
   width: 100%;
   background-color: var(--main-background-color);
   position: relative;
-  padding: 80px 0;
+  padding: var(--main-vpadding-section) 0;
   z-index: 0;
 }
 
@@ -859,7 +860,7 @@ section.pricing .all-table {
 table {
   display: block;
   width: 250px;
-  background-attachment: red;
+  background-color: #fcfcfc;
 }
 
 tr,
@@ -938,6 +939,22 @@ tfoot button a:active {
   color: red;
 }
 
+section.pricing article p,
+section.pricing article button {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+section.pricing article p {
+  font-size: 16pt;
+  font-weight: 400;
+  padding: 15px 0;
+}
+
+section.pricing article button {
+  text-transform: capitalize;
+  padding: 15px 30px;
+}
 /* END PRICING */
 /* ----------------------------------------------- */
 /* Start footer  */
