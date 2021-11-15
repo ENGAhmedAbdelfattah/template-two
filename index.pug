@@ -175,9 +175,17 @@ html(lang="en")
           button.repeat-button Contact Us
     //- END PRICING
     //- ----------------------------------------------
-    //- Start footer -->
-
-    //- End footer -->
+    //- START SUBSCRIBE
+    section.subscribe
+      .container
+        article
+          form(action="#", method="post")
+            .input-place
+              i(class="far fa-envelope")
+              input#subscribe-input(type="email", name="subscribe-input" placeholder="Your Email")
+            label(for="subscribe-input"): button.repeat-button subscribe 
+          p Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget tincidunt.
+    //- END SUBSCRIBE
     //- ----------------------------------------------
     //- Start footer -->
 
