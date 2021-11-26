@@ -1092,6 +1092,7 @@ section.contact article form input:last-of-type {
   align-self: flex-end;
   border: none;
   padding: 20px;
+  pointer: cursor;
 }
 
 section.contact article .info {
